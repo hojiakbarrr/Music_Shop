@@ -33,12 +33,12 @@ class OrderActivity : AppCompatActivity() {
 
         list = intent.getSerializableExtra("zakaz") as ArrayList<Order>
 
-        for (o in Remove.list) {
-            image += "~[" +o.imageId.toString() + "]~"
-            nameofInsrument += "~[" +o.ItemName + "]~"
-            client += "~[" +o.clientName +"]~"
-            sum += "~[" +o.orderKolich.toString()+"]~"
-            cena += "~[" +o.price.toString()+"]~"
+        for (o in list) {
+            image += " [" +o.imageId.toString() + "] "
+            nameofInsrument += " [" +o.ItemName + "] "
+            client += " [" +o.clientName +"] "
+            sum += " [" +o.orderKolich.toString()+"] "
+            cena += " [" +o.price.toString()+"] "
 
         }
 

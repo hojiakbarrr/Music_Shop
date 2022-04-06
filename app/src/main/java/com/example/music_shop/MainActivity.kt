@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() , Serializable {
     private var Flute: Int = 123
     private var Komuz: Int = 976
     var itog: Int? = 0
-    private var orderList: ArrayList<Order> = ArrayList<Order>()
     private var list = Remove.list;
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() , Serializable {
         return super.onCreateOptionsMenu(menu)
     }
     fun getStaticField(): ArrayList<Order> {
-        return this.orderList
+        return this.list
     }
 
 
@@ -55,7 +54,6 @@ class MainActivity : AppCompatActivity() , Serializable {
 
         val adap = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list)
         adap.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
 
 
         spinner?.adapter = adap
